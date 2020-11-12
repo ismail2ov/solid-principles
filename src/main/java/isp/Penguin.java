@@ -1,11 +1,7 @@
 package isp;
 
-public class Penguin implements Bird {
+public class Penguin implements SwimmingCreature, CreatureThatFeeds {
     String currentLocation;
-
-    public void fly() {
-        throw new UnsupportedOperationException();
-    }
 
     public void swim() {
         this.currentLocation = "in the water";

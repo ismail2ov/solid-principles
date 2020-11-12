@@ -10,12 +10,6 @@ public class PenguinTest {
     @Rule
     public ExpectedException exception = ExpectedException.none();
 
-    @Test(expected = UnsupportedOperationException.class)
-    public void testItCantActuallyFly() {
-        Penguin penguin = new Penguin();
-        penguin.fly();
-    }
-
     @Test
     public void testItCanSwim() {
         Penguin penguin = new Penguin();
