@@ -16,9 +16,8 @@ public class ElectricalDuck extends DuckImpl {
     @Override
     public void swim() {
         if (!this.isPowerOn()) {
-            throw new UnsupportedOperationException("The electrical duck is off");
-        } else {
-            System.out.println("The electrical duck is swimming");
+            this.turnPowerOn();
         }
+        System.out.println("The electrical duck is swimming");
     }
 }
