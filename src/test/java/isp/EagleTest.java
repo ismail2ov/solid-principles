@@ -12,13 +12,6 @@ public class EagleTest {
         assertEquals("in the air", eagle.currentLocation);
     }
 
-    @Test(expected = UnsupportedOperationException.class)
-    public void testItCanSwim() {
-        Eagle eagle = new Eagle();
-        eagle.swim();
-        assertEquals("in the water", eagle.currentLocation);
-    }
-
     @Test
     public void testItEating() {
         Eagle eagle = new Eagle();
