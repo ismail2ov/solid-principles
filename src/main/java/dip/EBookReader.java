@@ -2,10 +2,10 @@ package dip;
 
 public class EBookReader {
 
-	private PDFBook book;
+	private EBook book;
 	
-	public EBookReader(PDFBook pdfBook) {
-		this.book = pdfBook;
+	public EBookReader(EBook eBook) {
+		this.book = eBook;
 	}
 
 	public String read() {
