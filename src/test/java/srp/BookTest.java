@@ -41,19 +41,19 @@ public class BookTest {
 
     @Test
     public void testPrintHtmlPage() {
-        book.turnPage();
+        Printer printer = new HtmlPrinter();
 
-        String actual = book.printCurrentPage("html");
+        String actual = printer.printPage("A page to be printed in HTML");
 
-        assertEquals("<div class='page'>Page 2 content</div>", actual);
+        assertEquals("<div class='page'>A page to be printed in HTML</div>", actual);
     }
 
     @Test
     public void testPrintPlainText() {
-        book.turnPage();
+        Printer printer = new PlainTextPrinter();
 
-        String actual = book.printCurrentPage("plainText");
+        String actual = printer.printPage("A page to be printed in plain text");
 
-        assertEquals("Page 2 content", actual);
+        assertEquals("A page to be printed in plain text", actual);
     }
 }

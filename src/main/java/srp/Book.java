@@ -29,15 +29,6 @@ public class Book {
 			currentPageIndex++;
 		}
 	}
-	
-	public String printCurrentPage(String displayType) {
-		if (displayType.equals("plainText")) {
-			return pages.get(currentPageIndex);
-		} else if (displayType.equals("html")) {
-			return "<div class='page'>" + pages.get(currentPageIndex) + "</div>";	
-		}
-		return "Unknown type";
-	}
 
 	public int getCurrentPage() {
 		return currentPageIndex + 1;
