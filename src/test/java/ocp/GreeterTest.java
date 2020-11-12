@@ -7,29 +7,41 @@ import org.junit.Test;
 public class GreeterTest {
     @Test
     public void testSaysHello() {
-        Greeter greeter = new Greeter();
-        greeter.setFormality("any");
-        assertEquals("Hello.", greeter.greet());
+        AnyPersonality personality = new AnyPersonality();
+        Greeter greeter = new Greeter(personality);
+
+        String actual = greeter.greet();
+
+        assertEquals("Hello.", actual);
     }
 
     @Test
     public void testSaysHelloFormally() {
-        Greeter greeter = new Greeter();
-        greeter.setFormality("formal");
-        assertEquals("Good evening, sir.", greeter.greet());
+        FormalPersonality personality = new FormalPersonality();
+        Greeter greeter = new Greeter(personality);
+
+        String actual = greeter.greet();
+
+        assertEquals("Good evening, sir.", actual);
     }
 
     @Test
     public void testSaysHelloCasually() {
-        Greeter greeter = new Greeter();
-        greeter.setFormality("casual");
-        assertEquals("Sup bro?", greeter.greet());
+        CasualPersonality personality = new CasualPersonality();
+        Greeter greeter = new Greeter(personality);
+
+        String actual = greeter.greet();
+
+        assertEquals("Sup bro?", actual);
     }
 
     @Test
     public void testSaysHelloIntimately() {
-        Greeter greeter = new Greeter();
-        greeter.setFormality("intimate");
-        assertEquals("Hello Darling!", greeter.greet());
+        IntimatePersonality personality = new IntimatePersonality();
+        Greeter greeter = new Greeter(personality);
+
+        String actual = greeter.greet();
+
+        assertEquals("Hello Darling!", actual);
     }
 }
